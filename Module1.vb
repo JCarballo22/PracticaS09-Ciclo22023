@@ -8,7 +8,11 @@
         'FunCInt()
         'FunCStr()
         'FunCChar()
-        FunCDate()
+        'FunCDate()
+        'OperadorAsignacion()
+        'CicloWhile()
+        'CicloDoWhile()
+        CicloFor()
         Console.Read()
     End Sub
 
@@ -101,5 +105,109 @@
         Console.WriteLine(hora)
 
     End Sub
+
+    Sub OperadorAsignacion()
+        Dim a, b As Integer
+
+        a = 6
+        b = 5
+        Console.WriteLine("Los valores de la variableas a operar son: a= " & a & " y b = " & b)
+        'a = a + b
+        'a += b
+        'Console.WriteLine("El resultado de la suma: " & a)
+
+        'a -= b
+        'Console.WriteLine("El resultado de la resta: " & a)
+
+        'a *= b
+        'Console.WriteLine("El resultado de la multiplicación: " & a)
+
+        'a /= b
+        'Console.WriteLine("El resultado de la divición: " & a)
+
+        a = a Mod b
+        Console.WriteLine("El resultado de la resto: " & a)
+
+    End Sub
+
+    Sub CicloWhile()
+        Dim i = 10
+        'While i <= 10
+        '    Console.WriteLine("El iterador = " & i)
+        '    i += 1
+        '    'i = i + 1
+
+        'End While
+        'Console.WriteLine(i)
+
+        'While i >= 1
+        '    Console.WriteLine("El iterador = " & i)
+        '    i -= 1
+        '    'i = i - 1
+
+        'End While
+
+        Console.WriteLine("Por favor ingresa un #")
+        Dim repetir = Integer.Parse(Console.ReadLine())
+        While i <= repetir
+            Console.WriteLine("El iterador = " & i)
+            i += 1
+            'i = i + 1
+
+        End While
+
+
+    End Sub
+
+    Sub CicloDoWhile()
+        Dim i = 1
+        'Do
+        '    Console.WriteLine("El Interador = " & i)
+        '    i += 1
+        'Loop While i <= 10
+
+        'Do
+        '    Console.WriteLine("El Interador = " & i)
+        '    i -= 1
+        'Loop While i >= 1
+
+        Dim ramdon = New Random()
+        Dim aletorio = ramdon.Next(1, 6)
+        Console.WriteLine("El valor ramdon es: " & aletorio)
+        Do
+            Console.WriteLine("El Interador = " & i)
+            i += 1
+        Loop While i <= aletorio
+
+    End Sub
+
+    Sub CicloFor()
+
+        'For i = 1 To 10
+        '    Console.WriteLine("El interador = " & i)
+
+        'Next
+
+        'For i = 1 To 10 Step 2
+        '    Console.WriteLine("El interador = " & i)
+
+        'Next
+
+        'For i = 10 To 1 Step -1
+        '    Console.WriteLine("El interador = " & i)
+
+        'Next
+
+        Dim a, b As Integer
+        a = 10
+        b = Integer.Parse(Console.ReadLine())
+
+        For i = a To b Step 1
+            Console.WriteLine("El interador = " & i)
+
+        Next
+
+    End Sub
+
 
 End Module
